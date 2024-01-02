@@ -1,0 +1,55 @@
+<div class="containar">
+  
+  <div class="row">
+    
+    <div class="col-4"></div>
+    
+    <div class="col-5">
+      
+      <h1>User info</h1>
+    
+        <% if @user.errors.any? %>
+        
+          <div>
+            
+            <h2><%= @user.errors.count %> error prohibited this obj from being saved:</h2>
+            
+            <ul>
+              
+              <% @user.errors.full_messages.each do |message| %>
+              
+                <li><%= message %></li>
+                
+              <% end %>
+              
+            </ul>
+            
+          </div>
+          
+        <% end %>
+    
+          <%= form_with model: @user do |f| %>
+          
+            <p>Name</p>
+            
+            <%= f.text_field :name,class:"area" %>
+            
+            <p>image</p>
+            
+            <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>
+            
+            <p>Introduction</p>
+            
+            <%= f.text_area :introduction, maxlength: 50, class:"area" %>
+            
+            <div><%= f.submit "Update User", class:"btn btn-secondary" %></div>
+            
+          <% end %>
+          
+          </div>
+          <!--合計12にする為に仮置き-->
+          <div class="col-3"></div>
+
+  </div>
+
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+  
+  <div class="row">
+  
+     <div class="col-md-3">
+
+        <%= render 'books/list', books: @books %>
+      
+     </div>
+      
+    
+     <div class="col-md-8 offset-md-1">
+       
+       
+        <h2>Books</h2>
+        
+        <table class="table table-hover">
+          
+          <thead>
+            
+            <tr>
+              
+                <th class="p-4 border-top">image</th>
+                
+                <th class="p-4 border-top">name</th>
+                
+                <th class="p-4 border-top"></th>
+                
+            </tr>
+            
+          </thead>
+          
+         <% @users.each do |user| %>   
+         
+          <tbody >
+            
+            <tr>
+            
+            <td class="py-3 px-5 border-top"><%= image_tag user.get_profile_image(100,100)%></td>
+            
+            <td class="p-3 border-top"><%= user.name %></td>
+            
+            <td class="p-3 border-top"><%= link_to "Show" , user_path(user.id) %></td>
+            
+            </tr>
+            
+          </tbody>
+          
+           <% end %>  
+           
+        </table>
+        
+        
+    </div>
+
+  </div>
+
+</div>

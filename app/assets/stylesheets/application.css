@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+ background-color: #333333;
+ color: white;
+}
+
+.navi {
+ color: white;    
+}
+
+li {
+ list-style: none;   
+}
+
+.containar {
+   /*引き伸ばして margin: 0 auto;で真ん中に要素を持ってきた*/
+   /*正直良く分かってないです*/
+ width: 1250px;
+ margin: 0 auto;
+ padding: 10px 0;
+}
+
+.image-show {
+ width: 200px;
+}
+/*ログインログアウトのlinkを編集*/
+.link-b {
+  color: blue;
+  text-decoration: none;
+}
+ .link-b:hover{
+    text-decoration: underline;
+}
+/*トップ画面のボタン*/
+.btn-custom {
+width: 480px;
+margin: 10px;
+} 
+
+/*user editへの遷移*/
+.edit_btn{
+width: 300px;
+margin: 10px;
+}
+/*editのfield,area欄*/
+.area {
+width: 450px;    
+}
+/*new bookのcreate*/
+.area2{
+width: 300px;
+}
+/*力技で画面中央に持ってきた*/
+.containar-a {
+  width: 520px;
+ padding: 20px 0;
+}
+
+.containar-c {
+ width: 300px;
+ padding: 20px 0;
+}
